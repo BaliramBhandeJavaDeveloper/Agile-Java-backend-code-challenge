@@ -23,7 +23,7 @@ challenge, so don't hesitate to ask.
 
 ### Features
 
-The application to develop has to manage a collection of users with the following information:
+The application to develop has to manage a collection of userDetails with the following information:
 
 * Username (unique)
 * Name
@@ -36,21 +36,44 @@ not. Usage of a memory database or one integrated in the app itself is advised f
 
 The application will provide the following JSON web services:
 
-* */api/users/ (GET)*: return the list of all users.
-* */api/users/{username}/ (GET)*: return a single user.
-* */api/users/ (POST)*: create a user.
-* */api/users/{username}/ (PUT)*: update the information of a single user.
-* */api/users/{username}/ (DELETE)*: delete a single user.
-* */api/users/generate/{number}/ (GET)*: generate a number, provided as a parameter, of random users.
-To create the users you have to use the https://randomuser.me[Random User Generator] service. Users
-will be added to the collection of existing users.
-* */api/users/tree/ (GET)*: return a tree with the users grouped by country, state and city (It can’t be done in database).
+* */api/userDetails/ (GET)*: return the list of all userDetails.
+* */api/userDetails/{username}/ (GET)*: return a single userDetails.
+* */api/userDetails/ (POST)*: create a userDetails.
+* */api/userDetails/{username}/ (PUT)*: update the information of a single userDetails.
+* */api/userDetails/{username}/ (DELETE)*: delete a single userDetails.
+* */api/userDetails/generate/{number}/ (GET)*: generate a number, provided as a parameter, of random userDetails.
+To create the userDetails you have to use the https://randomuser.me[Random User Generator] service. Users
+will be added to the collection of existing userDetails.
+* */api/userDetails/tree/ (GET)*: return a tree with the userDetails grouped by country, state and city (It can’t be done in database).
 
 Extra optional features (only if you are done with the previous features):
 
 * Unit tests (at least one class).
-* Pagination of the users list.
+* Pagination of the userDetails list.
 * API documentation using Swagger, Spring REST docs or any other tool.
 
 Please, as an integral part of the challenge, update this document or add another one with the instructions required to build, run or test the project. As an example, if any external database is required, provide the required steps to prepare it beforehand, using docker or any other solution if possible, although using an integrated in memory database is preferred for simplicity.
+
+-----------------------------------------------------------------
+Below are the details of the implemented API.
+
+* */api/userDetails/ (GET)*: return the list of all userDetails.
+* */api/userDetails/{username}/ (GET)*: return a single userDetails.
+* */api/userDetails/ (POST)*: create a userDetails.
+
+* Swagger URL:-
+* http://localhost:8080/swagger-ui/index.html#/user-controller/createUser
+
+* Local-DB:-
+* http://localhost:8080/h2-console/login.do?jsessionid=a5687ff1feafd2bed6d1d908465c1d2a
+
+* API with Request Body:-
+* http://localhost:8080/api/users
+* {
+* "username": "balirambhande",
+* "name": "Baliram Bhande",
+* "email": "balirambhande@ovm.com",
+* "gender": "Male",
+* "pictureUrl": "http://ovm.com/baliram.jpg"
+* }
 
