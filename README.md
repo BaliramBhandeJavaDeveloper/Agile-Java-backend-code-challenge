@@ -69,11 +69,12 @@ Below are the details of the implemented API.
 
 * API with Request Body:-
 * http://localhost:8080/api/users
-* {
-* "username": "balirambhande",
-* "name": "Baliram Bhande",
-* "email": "balirambhande@ovm.com",
-* "gender": "Male",
-* "pictureUrl": "http://ovm.com/baliram.jpg"
-* }
+
+ {
+ "username": "balirambhande",
+ "name": "Baliram Bhande",
+ "email": "balirambhande@ovm.com",
+ "gender": "Male",
+ "pictureUrl": "http://ovm.com/baliram.jpg"
+ }
 
